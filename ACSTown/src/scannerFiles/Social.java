@@ -1,5 +1,7 @@
 package scannerFiles;
 
+import java.util.Scanner;
+
 public class Social
 {
    private String socialNum;
@@ -21,10 +23,10 @@ public class Social
 	public int getSum()
 	{
 		int sum = 0;
-		String[] dividedNums = socialNum.split("-");
-		for(int a = 0; a<dividedNums.length;a++){
-			sum+=Integer.parseInt(dividedNums[a]);
-		}
+		Scanner scan = new Scanner(socialNum);
+		scan.useDelimiter("-");
+		while(scan.hasNext())
+			sum+=scan.nextInt();
 		return sum;
 	}
 

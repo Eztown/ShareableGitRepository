@@ -91,7 +91,7 @@ public class MadLib
 	{
 		String story = "";
 		try{
-			Scanner file = new Scanner("storyBook");
+			Scanner file = new Scanner(storyBook);
 			story=file.nextLine();
 		}
 		catch(Exception e){
@@ -102,13 +102,16 @@ public class MadLib
 			switch (story.charAt(a)){
 				case '#':
 					//noun
-					story = story.substring(0, a) + getRandomNoun() + story.substring(a);
+					story = story.substring(0, a) + getRandomNoun() + story.substring(a+1);
+					break;
 				case '&':
 					//adjective
-					story = story.substring(0, a) + getRandomAdjective() + story.substring(a);
+					story = story.substring(0, a) + getRandomAdjective() + story.substring(a+1);
+					break;
 				case '@':
 					//verb
-					story = story.substring(0, a) + getRandomVerb() + story.substring(a);
+					story = story.substring(0, a) + getRandomVerb() + story.substring(a+1);
+					break;
 			}
 		}
 	   return story+"\n\n\n";
