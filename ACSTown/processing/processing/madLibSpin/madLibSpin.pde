@@ -51,8 +51,9 @@ void mousePressed(){
  catch(Exception e){
    
  }
- if(temp!=null)
- if(!temp.equals("")||!temp.equals(" ")){
+ if(temp==null)
+ reader = createReader("story.dat");
+ else if(!temp.equals("")||!temp.equals(" ")){
    story = temp;
    storyArray = story.split(" ");
  }

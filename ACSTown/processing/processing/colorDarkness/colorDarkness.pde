@@ -3,7 +3,8 @@ int hue;
 float pixNum;
 
 void setup(){
-  size(500,600);
+  fullScreen();
+  //size(500,600);
   colorMode(HSB);
   hue = (int)random(360);
   pixNum = 100;
