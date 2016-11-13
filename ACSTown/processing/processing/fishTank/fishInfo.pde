@@ -24,7 +24,4 @@ class fishInfo{
   void setType(String t){
     fishType = t;
   }
-  
-  
- 
 }

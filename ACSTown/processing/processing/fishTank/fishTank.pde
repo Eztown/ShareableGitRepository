@@ -7,9 +7,9 @@ void setup(){
 void draw(){
   background(0,100,255);
   for(fish a: fishList)
-    a.drup();
+    a.move();
 }
 
 void keyPressed(){
- fishList.add(new fish()); 
+ fishList.add(new fish(true)); 
 }
