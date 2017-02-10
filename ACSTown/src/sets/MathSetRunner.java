@@ -14,6 +14,10 @@ public class MathSetRunner
 {
 	public static void main(String args[]) throws IOException
 	{
-		//add test cases
+		Scanner scan = new Scanner(new File("mathsetdata.dat"));
+		while(scan.hasNextLine()){
+			MathSet set = new MathSet(scan.nextLine(),scan.nextLine());
+			System.out.println(set.toString());
+		}
 	}
 }

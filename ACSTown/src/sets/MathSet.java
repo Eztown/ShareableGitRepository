@@ -1,17 +1,16 @@
 package sets;
-//© A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -  
-//Lab  -  
 
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Scanner;
+
 import static java.lang.System.*;
 
 public class MathSet
 {
+	
 	private Set<Integer> one;
 	private Set<Integer> two;
 
@@ -21,35 +20,64 @@ public class MathSet
 
 	public MathSet(String o, String t)
 	{
+		one = new TreeSet<Integer>();
+		two = new TreeSet<Integer>();
+		String[] temp = o.split(" ");
+		String[] tempp = t.split(" ");
+		for(String s: temp)
+			one.add(Integer.parseInt(s));
+		for(String s: tempp)
+			two.add(Integer.parseInt(s));
 	}
 
 	public Set<Integer> union()
 	{
-		return null;
+		Set<Integer> returnSet = new TreeSet<Integer>();
+		returnSet.addAll(one);
+		returnSet.addAll(two);
+		return returnSet;
 	}
 
 	public Set<Integer> intersection()
 	{
-		return null;
+		Set<Integer> returnSet = new TreeSet<Integer>();
+		returnSet.addAll(one);
+		returnSet.retainAll(two);
+		return returnSet;
 	}
 
 	public Set<Integer> differenceAMinusB()
 	{
-		return null;
+		Set<Integer> returnSet = new TreeSet<Integer>();
+		returnSet.addAll(one);
+		returnSet.removeAll(two);
+		return returnSet;
 	}
 
 	public Set<Integer> differenceBMinusA()
 	{
-		return null;
+		Set<Integer> returnSet = new TreeSet<Integer>();
+		returnSet.addAll(two);
+		returnSet.removeAll(one);
+		return returnSet;
 	}
 	
 	public Set<Integer> symmetricDifference()
-	{		
-		return null;
+	{	
+		Set<Integer> returnSet = new TreeSet<Integer>();
+		returnSet.addAll(differenceBMinusA());
+		returnSet.addAll(differenceAMinusB());
+		return returnSet;
 	}	
 	
 	public String toString()
 	{
-		return "Set one " + one + "\n" +	"Set two " + two +  "\n";
+		String s = "Set one " + one + "\n" +	"Set two " + two +  "\n\n";
+		s += "Union: " + union() + "\n";
+		s += "Intersection: " + intersection() + "\n";
+		s += "B-A: " + differenceBMinusA() + "\n";
+		s += "A-B: " + differenceAMinusB() + "\n";
+		s += "Sym Difference: " + symmetricDifference() + "\n";
+		return s;
 	}
 }
