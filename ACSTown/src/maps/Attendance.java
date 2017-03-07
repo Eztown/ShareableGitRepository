@@ -8,7 +8,7 @@ public class Attendance{
 	
 	public static void main(String[] args) throws IOException{
 		//Create a Scanner object for the file and a Roster object
-		Scanner scan = new Scanner(new file(""));
+		//Scanner scan = new Scanner(new file(""));
 		
 		//Use the file to add students to the roster
 		
