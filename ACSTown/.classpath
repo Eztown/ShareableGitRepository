@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="processing"/>
-	<classpathentry excluding="src/|processing/" kind="src" path=""/>
+	<classpathentry kind="src" path="Brea"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="C:/Users/Maple/Desktop/CS Labs/jna-4.2.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Maple/Desktop/CS Labs/jna-platform-4.2.2.jar"/>
