@@ -4,3 +4,4 @@ a b c d e f g x y z g f h
 racecar is racecar
 1 2 3 a b c c b a 3 2 1
 chicken is a chicken
+a man a plan a canal panama
