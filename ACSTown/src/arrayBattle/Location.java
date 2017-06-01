@@ -8,7 +8,18 @@ public class Location {
 	
 	
 	
-	public Location(){
-		
+	public Location(float ix, float iy){
+		x = ix;
+		y = iy;
 	}
+	
+	float getLocX(){
+		return x;
+	}
+	
+	float getLocY(){
+		return y;
+	}
+	
+	
 }

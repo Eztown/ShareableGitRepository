@@ -34,5 +34,10 @@ public class Runner extends Canvas{
 	}
 	public void paint(Graphics w){
 		w.drawImage(img, 0, 0, null);
+		for(Location l:map.vertexSet()){
+			w.setColor(Color.BLUE);
+			w.fillRect((int)l.getLocX(), (int)l.getLocY(), 10, 10);
+			map.getAllEdges(l, l);
+		}	
 	}
 }

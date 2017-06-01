@@ -14,7 +14,7 @@ public class Initial extends JFrame{
 
 			getContentPane().add(new Runner());
 			
-			setSize(600,600);
+			setSize(515,525);
 
 			setVisible(true);
 
